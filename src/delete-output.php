@@ -9,8 +9,7 @@
 
 <?php
     $pdo=new PDO($connect, USER, PASS);
-    foreach ($pdo->query('select * from bothered') as $row){
-        $sql=$pdo->prepare('delete from bothered where ID=?');
+    $sql=$pdo->prepare('delete from bothered where ID=?');
     if($sql->execute([$_REQUEST['ID']])){
         echo '削除に成功しました。';
     }else{
@@ -19,7 +18,7 @@
 ?>
     <br><hr><br>
 	<table>
-    <tr><th>ID</th><th>めんどくさいこと</th></tr>
+    <tr><th>ID</th><th>めんど</th></tr>
 <?php
     foreach ($pdo->query('select * from bothered') as $row) {
         echo '<tr>';
@@ -33,4 +32,6 @@
     <form action="delete.php" method="post">
         <button type="submit">削除画面へ戻る</button>
     </form>
+
+
 
