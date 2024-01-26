@@ -7,7 +7,7 @@
     $connect = 'mysql:host='. SERVER . ';dbname='. DBNAME . ';charset=utf8';
 ?>
 
-    <p>商品を追加</p>
+    <p>追加</p>
     <form action="registration-output.php" method="post">
 		ID<input type="text" name="ID"><p>
 		めんどくさいこと<input type="text" name="name"><p>
