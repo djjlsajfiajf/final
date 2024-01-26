@@ -15,7 +15,7 @@ if (empty($_POST['name'])) {
     echo 'ブランド名を入力してください。';
 } else {
     
-    if ($sql->execute([$_POST['name'], $_POST['ID']])) {
+    if ($sql->execute([$_POST['ID'], $_POST['name']])) {
         echo '更新に成功しました。';
     } else {
         echo '更新に失敗しました。';
