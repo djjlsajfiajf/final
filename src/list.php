@@ -7,7 +7,7 @@
     $connect = 'mysql:host='. SERVER . ';dbname='. DBNAME . ';charset=utf8';
 ?>
 <table>
-<tr>めんどくさいこと<th></th><th>ID</th></tr>
+<tr>めんどくさいこと<th></th></tr>
 <?php
     $pdo=new PDO($connect, USER, PASS);
 
